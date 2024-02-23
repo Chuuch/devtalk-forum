@@ -10,13 +10,15 @@ import PostDetails from './routes/PostDetails/PostDetails.tsx';
 import TrendingPosts from './routes/TrendingPosts/TrendingPosts.tsx';
 import UserProfile from './routes/UserProfile/UserProfile.tsx';
 import SearchResults from './routes/SearchResults/SearchResults.tsx';
-import App from './App.tsx';
+import App from './routes/App.tsx';
+import News from './routes/News/News.tsx';
 
 export const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
 		children: [
+			{ path: '/news', element: <News /> },
 			{ path: '/about', element: <About /> },
 			{ path: '/forum', element: <Forum /> },
 			{ path: '/contact', element: <Contact /> },
